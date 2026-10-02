@@ -1,0 +1,45 @@
+/*
+ * Do not register these with @property: registered tokens resolve
+ * currentColor once at :root and stop following the host theme.
+ */
+:root {
+
+	/* Color */
+	--moon-color-text: currentcolor;
+	--moon-color-text-muted: color-mix(in srgb, var(--moon-color-text) 80%, transparent);
+	--moon-color-primary: currentcolor;
+	--moon-color-primary-subtle: color-mix(in srgb, var(--moon-color-primary) 10%, transparent);
+	--moon-color-surface: color-mix(in srgb, var(--moon-color-text) 4%, transparent);
+	--moon-color-border: color-mix(in srgb, var(--moon-color-text) 20%, transparent);
+
+	/* Typography */
+	--moon-font-size-sm: 0.875em;
+	--moon-font-size-md: 1em;
+	--moon-font-size-lg: 1.125em;
+	--moon-font-weight-strong: 600;
+	--moon-line-height-tight: 1.35;
+
+	/* Border, radius, focus, motion */
+	--moon-radius: 6px;
+	--moon-border-width: 1px;
+	--moon-border-width-strong: 2px;
+	--moon-border: var(--moon-border-width) solid var(--moon-color-border);
+	--moon-focus-ring-width: 2px;
+	--moon-focus-ring-offset: 2px;
+	--moon-duration-fast: 150ms;
+
+	/* Spacing */
+	--moon-space-1: 0.25rem;
+	--moon-space-2: 0.5rem;
+	--moon-space-3: 0.75rem;
+	--moon-space-4: 1rem;
+	--moon-space-5: 1.5rem;
+	--moon-space-6: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	:root {
+		--moon-duration-fast: 0ms;
+	}
+}
