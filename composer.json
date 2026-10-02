@@ -1,0 +1,28 @@
+{
+    "name": "irvannoerfazri/moon-blocks",
+    "description": "A lightweight collection of Gutenberg blocks for documentation, wiki, and knowledge base websites that adapts to any WordPress theme.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Irvan Noerfazri"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.4",
+        "phpcompatibility/phpcompatibility-wp": "^2.1"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint:php": "phpcs",
+        "lint:php:fix": "phpcbf"
+    }
+}
