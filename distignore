@@ -1,0 +1,38 @@
+# Version control
+.git
+.github
+.gitignore
+.gitattributes
+
+# Editor and tooling config
+.editorconfig
+.distignore
+phpcs.xml
+webpack.config.js
+
+# Node tooling
+node_modules
+package.json
+package-lock.json
+
+# PHP tooling
+vendor
+composer.json
+composer.lock
+
+# Uncompiled source (build/ is what ships)
+src
+
+# GitHub-only documentation
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+
+# Local and generated files
+*.zip
+*.log
+.env
+.DS_Store
+Thumbs.db
