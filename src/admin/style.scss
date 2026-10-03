@@ -1,0 +1,48 @@
+// This screen follows the WordPress admin design and does not load the
+// front-end design tokens, so spacing uses plain values.
+
+.moon-settings {
+	max-width: 720px;
+	margin-top: 16px;
+
+	.components-notice {
+		margin: 0 0 16px;
+	}
+
+	.components-tab-panel__tab-content {
+		padding-top: 16px;
+	}
+
+	.moon-settings__blocks,
+	.moon-settings__colors {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.moon-settings__color {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 16px;
+
+		.components-button {
+			gap: 8px;
+		}
+	}
+
+	.moon-settings__color-label {
+		display: flex;
+		flex: 1 1 200px;
+		flex-direction: column;
+		gap: 4px;
+
+		span {
+			opacity: 0.8;
+		}
+	}
+
+	.moon-settings__footer {
+		margin-top: 24px;
+	}
+}
