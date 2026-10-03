@@ -8,14 +8,26 @@
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
+  "files": [
+    "assets",
+    "build",
+    "includes",
+    "languages",
+    "moon-blocks.php",
+    "readme.txt",
+    "uninstall.php"
+  ],
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start",
+    "plugin-zip": "npm run build && wp-scripts plugin-zip",
     "lint:js": "wp-scripts lint-js src",
     "lint:css": "wp-scripts lint-style \"src/**/*.scss\""
   },
   "devDependencies": {
     "@wordpress/api-fetch": "^7.33.1",
+    "@wordpress/block-editor": "^15.6.9",
+    "@wordpress/blocks": "^15.6.3",
     "@wordpress/components": "^30.6.5",
     "@wordpress/element": "^6.33.1",
     "@wordpress/i18n": "^6.6.1",
