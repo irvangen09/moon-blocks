@@ -15,6 +15,10 @@
     "lint:css": "wp-scripts lint-style \"src/**/*.scss\""
   },
   "devDependencies": {
+    "@wordpress/api-fetch": "^7.33.1",
+    "@wordpress/components": "^30.6.5",
+    "@wordpress/element": "^6.33.1",
+    "@wordpress/i18n": "^6.6.1",
     "@wordpress/scripts": "^36.0.0"
   }
 }
