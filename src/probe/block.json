@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "moon-blocks/probe",
+  "title": "Moon Probe",
+  "category": "widgets",
+  "description": "Temporary block used to check the plugin foundation.",
+  "textdomain": "moon-blocks",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": [ "moon-blocks-tokens", "file:./style-index.css" ]
+}
