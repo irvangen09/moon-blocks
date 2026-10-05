@@ -1,0 +1,45 @@
+.moon-callout {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--moon-space-3);
+
+	/* Vertical only: constrained layouts center blocks with inline margins. */
+	margin-block: var(--moon-space-5);
+	padding: var(--moon-space-3) var(--moon-space-4);
+
+	/* No 4px width token; double the strong width. */
+	border-left: calc(var(--moon-border-width-strong) * 2) solid var(--moon-color-primary);
+	border-radius: 0 var(--moon-radius) var(--moon-radius) 0;
+	background: var(--moon-color-surface);
+	color: inherit;
+	font-family: inherit;
+	font-size: var(--moon-font-size-md);
+
+	.moon-callout__icon {
+		flex: none;
+		width: var(--moon-font-size-lg);
+		height: var(--moon-font-size-lg);
+
+		/* Centers the icon on the first line of text. */
+		margin-top: calc((1lh - var(--moon-font-size-lg)) / 2);
+		color: var(--moon-color-primary);
+	}
+
+	.moon-callout__body {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.moon-callout__label,
+	.moon-callout__text {
+		margin: 0;
+	}
+
+	.moon-callout__label {
+		font-weight: var(--moon-font-weight-strong);
+	}
+
+	.moon-callout__text > :last-child {
+		margin-bottom: 0;
+	}
+}
