@@ -10,6 +10,8 @@ class BlockRegistry {
 
 	private const NAMESPACE_PREFIX = 'moon-blocks/';
 
+	private const CATEGORY = 'moon-blocks';
+
 	private SettingsRegistry $settings;
 
 	private ?array $blocks = null;
@@ -22,6 +24,7 @@ class BlockRegistry {
 
 	public function register(): void {
 		add_action( 'init', array( $this, 'register_blocks' ) );
+		add_filter( 'block_categories_all', array( $this, 'add_category' ) );
 	}
 
 	public function register_blocks(): void {
@@ -30,6 +33,15 @@ class BlockRegistry {
 				register_block_type( $block['dir'] );
 			}
 		}
+	}
+
+	public function add_category( array $categories ): array {
+		$categories[] = array(
+			'slug'  => self::CATEGORY,
+			'title' => __( 'Moon Blocks', 'moon-blocks' ),
+		);
+
+		return $categories;
 	}
 
 	/**
