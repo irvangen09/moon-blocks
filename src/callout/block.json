@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "moon-blocks/callout",
+  "title": "Moon Callout",
+  "category": "moon-blocks",
+  "description": "Highlights a note, tip, or warning within an article.",
+  "keywords": [ "callout", "note", "tip", "warning" ],
+  "textdomain": "moon-blocks",
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "enum": [ "info", "tips", "warning", "important" ],
+      "default": "info"
+    },
+    "content": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".moon-callout__text"
+    },
+    "label": {
+      "type": "string",
+      "source": "text",
+      "selector": ".moon-callout__label"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": [ "moon-blocks-tokens", "file:./style-index.css" ]
+}
