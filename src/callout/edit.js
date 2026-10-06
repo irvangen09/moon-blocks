@@ -32,13 +32,16 @@ export default function Edit( { attributes, setAttributes } ) {
 		className: `moon-callout moon-callout--${ variant }`,
 	} );
 
-	// A saved block always has content (possibly empty), so both values
-	// being undefined identifies a newly inserted block.
+	// New blocks have no label and empty content (an empty RichTextData, not
+	// undefined). Requiring empty content keeps a cleared label cleared when
+	// a saved block is reloaded, since an empty label is not stored.
+	const isContentEmpty = ! content?.toString();
+
 	useEffect( () => {
-		if ( undefined === content && undefined === label ) {
+		if ( undefined === label && isContentEmpty ) {
 			setAttributes( { label: getVariantName( variant ) } );
 		}
-	}, [ content, label, variant, setAttributes ] );
+	}, [ label, isContentEmpty, variant, setAttributes ] );
 
 	function onVariantChange( next ) {
 		const isDefaultLabel = label === getVariantName( variant );
