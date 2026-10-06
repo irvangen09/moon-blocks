@@ -2,7 +2,7 @@
 Tags: blocks, gutenberg, documentation, wiki, knowledge base
 Requires at least: 6.9
 Requires PHP: 8.0
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,10 @@ Lightweight Gutenberg blocks for documentation, wiki, and knowledge base website
 Moon Blocks is a collection of Gutenberg blocks made for documentation, wiki, and knowledge base websites.
 
 It is designed to blend into your site. Typography and colors come from your theme, and there is no separate dark mode to maintain. Block styles and scripts are loaded only on pages that use the block.
+
+**Blocks**
+
+* **Callout** highlights a note, tip, warning, or important point. Each variant has its own icon and an editable label.
 
 **Settings**
 
@@ -40,6 +44,11 @@ Yes. Open Settings > Moon Blocks > Blocks and switch off any block. Turning off 
 Yes. Open Settings > Moon Blocks > Appearance to set Primary, Surface, and Border. Please make sure the colors you choose have enough contrast with your theme.
 
 == Changelog ==
+
+= 0.2.0 =
+
+* Added the Callout block with four variants: Info, Tips, Warning, and Important. Each variant shows its own icon and an editable label.
+* Added a "Moon Blocks" category to the block inserter.
 
 = 0.1.0 =
 
