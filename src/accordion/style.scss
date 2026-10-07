@@ -1,0 +1,76 @@
+.moon-accordion {
+
+	/* Vertical only: constrained layouts center blocks with inline margins. */
+	margin-block: var(--moon-space-5);
+	border-top: var(--moon-border);
+
+	.moon-accordion-item {
+		border-bottom: var(--moon-border);
+	}
+
+	/* Themes often style summary and headings, so reset them explicitly. */
+	.moon-accordion-item__summary {
+		display: flex;
+		align-items: center;
+		gap: var(--moon-space-2);
+		margin: 0;
+		padding: var(--moon-space-3) var(--moon-space-1);
+		border: 0;
+		background: none;
+		color: inherit;
+		font-family: inherit;
+		list-style: none;
+		cursor: pointer;
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::after {
+			content: "";
+			flex: none;
+			margin-inline-start: auto;
+			inline-size: var(--moon-space-3);
+			block-size: var(--moon-space-2);
+			background: var(--moon-color-primary);
+			clip-path: polygon(0 0, 100% 0, 50% 100%);
+			transition: transform var(--moon-duration-fast) ease;
+		}
+
+		&:focus-visible {
+			outline: var(--moon-focus-ring-width) solid var(--moon-color-text);
+			outline-offset: var(--moon-focus-ring-offset);
+		}
+	}
+
+	.moon-accordion-item[open] > .moon-accordion-item__summary::after {
+		transform: rotate(180deg);
+	}
+
+	.moon-accordion-item__title {
+		flex: 1;
+		min-width: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: inherit;
+		font-family: inherit;
+	}
+
+	.moon-accordion-item__content {
+		padding: 0 var(--moon-space-1) var(--moon-space-4);
+	}
+
+	.moon-accordion-item__content > :last-child {
+		margin-block-end: 0;
+	}
+}
+
+/* Forced colors replace author backgrounds; a system color is kept. */
+@media (forced-colors: active) {
+
+	.moon-accordion .moon-accordion-item__summary::after {
+		background: CanvasText;
+	}
+}
