@@ -2,7 +2,7 @@
 Tags: blocks, gutenberg, documentation, wiki, knowledge base
 Requires at least: 6.9
 Requires PHP: 8.0
-Stable tag: 0.2.0
+Stable tag: 0.3.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,7 @@ It is designed to blend into your site. Typography and colors come from your the
 
 **Blocks**
 
+* **Accordion** groups content into sections that visitors can open and close. Items can start open on wide screens and collapsed on mobile, and a link to an item opens it automatically.
 * **Callout** highlights a note, tip, warning, or important point. Each variant has its own icon and an editable label.
 
 **Settings**
@@ -44,6 +45,11 @@ Yes. Open Settings > Moon Blocks > Blocks and switch off any block. Turning off 
 Yes. Open Settings > Moon Blocks > Appearance to set Primary, Surface, and Border. Please make sure the colors you choose have enough contrast with your theme.
 
 == Changelog ==
+
+= 0.3.0 =
+
+* Added the Accordion block: sections with an editable title and free-form content. Choose the title's heading level (H2 to H6) or plain text.
+* Accordion items can start open on desktop and collapsed on mobile, and visitors can always open and close them. Links to an item, or to content inside it, open the item automatically.
 
 = 0.2.0 =
 

@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-08
+
+### Added
+
+- Accordion block: sections with an editable title and free-form content. Choose the title's heading level (H2 to H6) or plain text.
+- Accordion items can start open on desktop and collapsed on mobile, and visitors can always open and close them. Links to an item, or to content inside it, open the item automatically.
+
 ## [0.2.0] - 2026-10-06
 
 ### Added
