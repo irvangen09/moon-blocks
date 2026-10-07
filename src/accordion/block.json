@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "moon-blocks/accordion",
+  "title": "Moon Accordion",
+  "category": "moon-blocks",
+  "description": "Groups content into sections that visitors can expand and collapse.",
+  "keywords": [ "accordion", "toggle", "section", "faq" ],
+  "textdomain": "moon-blocks",
+  "attributes": {
+    "openOnDesktop": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": [ "moon-blocks-tokens", "file:./style-index.css" ],
+  "viewScript": "file:./view.js"
+}
