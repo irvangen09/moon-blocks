@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-10-08
+
+### Fixed
+
+- Callout no longer extends past the content width in themes that do not use `box-sizing: border-box`.
+- The Callout label field no longer shows a white background in the editor.
+
 ## [0.3.0] - 2026-10-08
 
 ### Added
