@@ -1,4 +1,6 @@
 .moon-callout {
+
+	box-sizing: border-box;
 	display: flex;
 	align-items: flex-start;
 	gap: var(--moon-space-3);
