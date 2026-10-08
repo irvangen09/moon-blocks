@@ -1,5 +1,9 @@
 .moon-callout {
 
+	.moon-callout__label {
+		background: transparent;
+	}
+
 	/* Muted token already fades the text; reset core's extra opacity. */
 	.moon-callout__label::placeholder,
 	.moon-callout__text [data-rich-text-placeholder]::after {
