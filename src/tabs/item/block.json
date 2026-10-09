@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "moon-blocks/tabs-item",
+  "title": "Moon Tab Item",
+  "category": "moon-blocks",
+  "description": "One tab of a tabs block: a short label and free-form content.",
+  "parent": [ "moon-blocks/tabs" ],
+  "textdomain": "moon-blocks",
+  "attributes": {
+    "label": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".moon-tabs-item__label"
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false,
+    "anchor": true
+  }
+}
