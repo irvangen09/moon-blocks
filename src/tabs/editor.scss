@@ -1,0 +1,16 @@
+.moon-tabs {
+
+	/* Items are stacked in the editor; a dashed border shows where each ends. */
+	.moon-tabs-item {
+		box-sizing: border-box;
+		padding: var(--moon-space-2);
+		border: var(--moon-border-width) dashed var(--moon-color-border);
+		border-radius: var(--moon-radius);
+	}
+
+	/* Muted token already fades the text; reset core's extra opacity. */
+	.moon-tabs-item__label [data-rich-text-placeholder]::after {
+		color: var(--moon-color-text-muted);
+		opacity: 1;
+	}
+}
