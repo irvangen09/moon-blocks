@@ -22,8 +22,8 @@
 		display: flex;
 		gap: var(--moon-space-4);
 		margin-block-end: var(--moon-space-4);
-		border-bottom: var(--moon-border);
-		overflow-x: auto;
+		box-shadow: inset 0 calc(-1 * var(--moon-border-width)) 0 var(--moon-color-border);
+		overflow: auto hidden;
 	}
 
 	/* Themes often style buttons, so reset them explicitly. */
@@ -31,7 +31,6 @@
 		box-sizing: border-box;
 		flex: none;
 		margin: 0;
-		margin-block-end: calc(-1 * var(--moon-border-width));
 		padding: var(--moon-space-1) var(--moon-space-1) var(--moon-space-3);
 		border: 0;
 		border-bottom: var(--moon-border-width-strong) solid transparent;
@@ -99,6 +98,10 @@
 /* Forced colors replace author colors; system colors keep the selection
  * visible. */
 @media (forced-colors: active) {
+
+	.moon-tabs .moon-tabs__list {
+		border-bottom: var(--moon-border-width) solid CanvasText;
+	}
 
 	.moon-tabs .moon-tabs__tab {
 		border-bottom-color: Canvas;
