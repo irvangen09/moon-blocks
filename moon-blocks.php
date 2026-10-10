@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Moon Blocks
  * Description:       Lightweight Gutenberg blocks for documentation, wiki, and knowledge base websites.
- * Version:           0.3.1
+ * Version:           0.4.0
  * Requires at least: 6.9
  * Requires PHP:      8.0
  * Author:            Irvan Noerfazri
@@ -30,7 +30,7 @@ if ( version_compare( PHP_VERSION, '8.0', '<' ) || version_compare( get_bloginfo
 	return;
 }
 
-define( 'MOON_BLOCKS_VERSION', '0.3.1' );
+define( 'MOON_BLOCKS_VERSION', '0.4.0' );
 define( 'MOON_BLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MOON_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
