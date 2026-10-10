@@ -2,7 +2,7 @@
 Tags: blocks, gutenberg, documentation, wiki, knowledge base
 Requires at least: 6.9
 Requires PHP: 8.0
-Stable tag: 0.3.1
+Stable tag: 0.4.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,7 @@ It is designed to blend into your site. Typography and colors come from your the
 
 * **Accordion** groups content into sections that visitors can open and close. Items can start open on wide screens and collapsed on mobile, and a link to an item opens it automatically.
 * **Callout** highlights a note, tip, warning, or important point. Each variant has its own icon and an editable label.
+* **Tabs** organizes content into panels that visitors switch between with a row of tabs. Tabs work with the keyboard, and a link to a tab, or to content inside it, opens that tab automatically. Without JavaScript, all panels are shown one after another.
 
 **Settings**
 
@@ -45,6 +46,11 @@ Yes. Open Settings > Moon Blocks > Blocks and switch off any block. Turning off 
 Yes. Open Settings > Moon Blocks > Appearance to set Primary, Surface, and Border. Please make sure the colors you choose have enough contrast with your theme.
 
 == Changelog ==
+
+= 0.4.0 =
+
+* Added the Tabs block: a row of tabs that switches between panels of free-form content. Tabs can be selected with the mouse, touch, or the arrow, Home, and End keys.
+* Links to a tab, or to content inside it, open that tab automatically, including tabs nested inside other tabs. In browsers that support it, find-in-page also opens the tab that contains the match.
 
 = 0.3.1 =
 
