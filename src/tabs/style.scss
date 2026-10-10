@@ -1,0 +1,110 @@
+.moon-tabs {
+
+	/* Vertical only: constrained layouts center blocks with inline margins. */
+	margin-block: var(--moon-space-5);
+
+	/* Before view.js runs: every item is shown in sequence. */
+	.moon-tabs-item {
+		margin-block-end: var(--moon-space-4);
+	}
+
+	.moon-tabs-item__label {
+		margin-block-end: var(--moon-space-2);
+		font-weight: var(--moon-font-weight-strong);
+	}
+
+	/* After view.js runs: the tab row and the panels replace that sequence. */
+	&.moon-tabs--enhanced > .moon-tabs-item {
+		margin: 0;
+	}
+
+	.moon-tabs__list {
+		display: flex;
+		gap: var(--moon-space-4);
+		margin-block-end: var(--moon-space-4);
+		border-bottom: var(--moon-border);
+		overflow-x: auto;
+	}
+
+	/* Themes often style buttons, so reset them explicitly. */
+	.moon-tabs__tab {
+		box-sizing: border-box;
+		flex: none;
+		margin: 0;
+		margin-block-end: calc(-1 * var(--moon-border-width));
+		padding: var(--moon-space-1) var(--moon-space-1) var(--moon-space-3);
+		border: 0;
+		border-bottom: var(--moon-border-width-strong) solid transparent;
+		border-radius: 0;
+		background: none;
+		box-shadow: none;
+		color: var(--moon-color-text-muted);
+		font: inherit;
+		font-weight: var(--moon-font-weight-strong);
+		letter-spacing: inherit;
+		line-height: var(--moon-line-height-tight);
+		text-align: start;
+		text-transform: none;
+		white-space: nowrap;
+		appearance: none;
+		cursor: pointer;
+		touch-action: manipulation;
+		transition: color var(--moon-duration-fast) ease, border-color var(--moon-duration-fast) ease;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: none;
+			box-shadow: none;
+		}
+
+		&:hover {
+			color: var(--moon-color-text);
+		}
+
+		&[aria-selected="true"] {
+			border-bottom-color: var(--moon-color-primary);
+			color: var(--moon-color-primary);
+		}
+
+		/* Inset: the scrolling tab row would clip a ring drawn outside. */
+		&:focus-visible {
+			outline: var(--moon-focus-ring-width) solid var(--moon-color-text);
+			outline-offset: calc(-1 * var(--moon-focus-ring-width));
+		}
+	}
+
+	/* No vertical margin or padding: a panel hidden with until-found keeps
+	 * its box, so any would leave a gap. */
+	.moon-tabs__panel {
+		margin: 0;
+		padding: 0;
+
+		/* until-found must stay rendered or find-in-page cannot reach it. */
+		&[hidden]:not([hidden="until-found"]) {
+			display: none;
+		}
+
+		&:focus-visible {
+			outline: var(--moon-focus-ring-width) solid var(--moon-color-text);
+			outline-offset: var(--moon-focus-ring-offset);
+		}
+
+		> :last-child {
+			margin-block-end: 0;
+		}
+	}
+}
+
+/* Forced colors replace author colors; system colors keep the selection
+ * visible. */
+@media (forced-colors: active) {
+
+	.moon-tabs .moon-tabs__tab {
+		border-bottom-color: Canvas;
+	}
+
+	.moon-tabs .moon-tabs__tab[aria-selected="true"] {
+		border-bottom-color: Highlight;
+	}
+}
